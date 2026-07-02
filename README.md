@@ -1,2 +1,12 @@
-# CircuitSimulator
-# This is a circuit simulator which calculates the voltage and current at each node given a circuit setup. The first version has resistors and voltage sources components.
+# Circuit Simulator
+
+A circuit simulator built from scratch in Python using Modified Nodal Analysis (MNA).
+
+![Circuit simulator GUI showing a solved voltage divider](docs/gui-divider.png)
+
+## How it works
+
+Each component stamps its contribution into a conductance matrix,
+then numpy solves the resulting system:
+
+![MNA pipeline diagram](docs/mna-pipeline.png)
